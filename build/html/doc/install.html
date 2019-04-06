@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="vi" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="vi" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hướng dẫn cài đặt &mdash; Tài liệu ROSNV 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Tìm Kiếm" href="../search.html" />
+    <link rel="next" title="Tổng quan về ROS" href="overview.html" />
+    <link rel="prev" title="ROS có thể làm được những gì?" href="paren_introduction/WhatROScando.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ROSNV
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Giới thiệu về ROS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hướng dẫn cài đặt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cach-1-cai-dat-chung">Cách 1: Cài đặt chung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cach-2-cai-dat-nhanh">Cách 2: cài đặt nhanh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cai-moi-truong">Cài môi trường</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cai-integrated-development-environment-ide">Cài Integrated Development Environment(IDE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cai-moveit">Cài MoveIt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Tổng quan về ROS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ROSNV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Hướng dẫn cài đặt</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/doc/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="huong-dan-cai-dat">
+<h1>Hướng dẫn cài đặt<a class="headerlink" href="#huong-dan-cai-dat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cach-1-cai-dat-chung">
+<h2>Cách 1: Cài đặt chung<a class="headerlink" href="#cach-1-cai-dat-chung" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Ghi chú</p>
+<p>Khi dùng Ubuntu 16 bạn cài ROS bản Kinetic Kame, với Ubuntu 18 bạn cài bản ROS Melodic</p>
+</div>
+<ol class="arabic simple">
+<li><p>Cài git</p></li>
+</ol>
+<blockquote>
+<div><p>Để tải trực tiếp trong Linux, bạn sẽ cần cài đặt git. Mở terminal và cài đặt git như sau:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Chỉnh lại chuẩn US</p></li>
+</ol>
+<blockquote>
+<div><p>Các bạn mở mục “software &amp; updates” nhớ chọn như hình vẽ bên dưới và chỉnh server US</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh4.png"><img alt="../_images/anh4.png" src="../_images/anh4.png" style="width: 300px;" /></a>
+<ol class="arabic" start="3">
+<li><p>Cài đặt 'chrony' và sau đó chỉ định máy chủ NTP bằng lệnh 'ntpdate':</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">chrony</span> <span class="n">ntpdate</span>
+<span class="n">sudo</span> <span class="n">ntpdate</span> <span class="o">-</span><span class="n">q</span> <span class="n">ntp</span><span class="o">.</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+</li>
+<li><p>Cài khóa công khai để tải các package trên kho lưu trữ của ROS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">hkp</span><span class="p">:</span> <span class="o">//</span><span class="n">ha</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">sks</span><span class="o">-</span><span class="n">keyservers</span><span class="o">.</span><span class="n">net</span><span class="p">:</span> <span class="mi">80</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="mi">421</span><span class="n">C365BD9FF1F717815A3895523BAEEB01FA116</span>
+</pre></div>
+</div>
+</li>
+<li><p>Nâng cấp các package trong Ubuntu của bạn. Ở thời điểm hiện tại bạn hiểu package đơn giản là một folder trong windown:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span> <span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
+</li>
+<li><p>Bạn tiến hành cài ROS Kinetic Kame bản full:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">desktop</span><span class="o">-</span><span class="n">full</span>
+</pre></div>
+</div>
+</li>
+<li><p>Khởi tạo rosdep</p></li>
+</ol>
+<p>Để sử dụng ROS bạn hãy chắc chắn khởi tạo rosdep. rosdep giúp ROS trở lên thân thiện với người dùng:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rosdep</span> <span class="n">init</span>
+<span class="n">rosdep</span> <span class="n">update</span>
+</pre></div>
+</div>
+<ol class="arabic" start="8">
+<li><p>Cài đặt rosinstall. Chương trình này cài đặt các gói khác nhau của ROS. Bạn hãy chắc chắn cài nó vì nó khá thường xuyên được dùng:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">rosinstall</span>
+</pre></div>
+</div>
+</li>
+<li><p>Cài đặt môi trường. Các biến  môi trường như ROS_ROOT, ROS_PACKAGE_PATH...:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>OK vậy là bạn đã tương đối cài xong ROS. Bây giờ chúng ta cùng test thử với việc tạo catkin_workspace ở bước 10 nhé. Ghi nhớ catkin chỉ cần cài một lần trừ khi bạn xây dựng không gian làm việc mới nhé.</p>
+<ol class="arabic" start="10">
+<li><p>Tạo catin_workspace:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">src</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">src</span>
+<span class="n">catkin_init_workspace</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Bây giờ bạn đã có catkin_workspace chỉ chứa 2 mục bên trong là 'src' và ‘CMakeLists.txt’. Hãy build nó với lệnh 'catkin_make' nhé:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span>
+<span class="n">catkin_make</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Ghi chú</p>
+<p>Khi bạn đã xây dựng xong mà không gặp lỗi, hãy chạy lệnh ‘ls'.
+Ngoài thư mục ‘src' được tạo bởi người dùng còn có các thư mục ‘build' và thư mục 'devel' là các tệp liên quan đến build cho hệ thống xây dựng catkin được lưu trong thư mục ‘build, và các tệp liên quan đến thực thi được lưu trong thư mục ‘devel':</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+<span class="n">kết</span> <span class="n">quả</span> <span class="n">hiện</span> <span class="n">lên</span> <span class="n">sẽ</span> <span class="n">gồm</span><span class="p">:</span>
+<span class="n">build</span>    <span class="n">devel</span>   <span class="n">src</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="11">
+<li><p>cuối cùng thêm setting file associated vào hệ thống catkin build:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Nào cùng xem ROS của bạn đã cài thành công chưa với lệnh sau nhé:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscore</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/anh5.png"><img alt="../_images/anh5.png" src="../_images/anh5.png" style="width: 300px;" /></a>
+<p>Nếu hiện như thế này là ok nhé các bạn. các bạn nhấn Ctrl+C để thoát.</p>
+</div>
+<div class="section" id="cach-2-cai-dat-nhanh">
+<h2>Cách 2: cài đặt nhanh<a class="headerlink" href="#cach-2-cai-dat-nhanh" title="Permalink to this headline">¶</a></h2>
+<p>Nếu bạn đang sử dụng là 16.04.x hoặc Linux Mint 18.x, tập lệnh sau sẽ cho phép bạn đơn giản hóa quy trình cài đặt ROS đã nói ở trên:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ROBOTIS</span><span class="o">-</span><span class="n">GIT</span><span class="o">/</span><span class="n">robotis_tools</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">install_ros_kinetic</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">chmod</span> <span class="mi">755</span> <span class="o">./</span><span class="n">install_ros_kinetic</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">bash</span> <span class="o">./</span><span class="n">install_ros_kinetic</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Cài đặt nhanh đã bao hàm cả cài đặt chung ở phía trên và cài đặt môi trường ở phía dưới.</p>
+</div>
+<div class="section" id="cai-moi-truong">
+<h2>Cài môi trường<a class="headerlink" href="#cai-moi-truong" title="Permalink to this headline">¶</a></h2>
+<p>Lệnh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">source</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>luôn được nhập mỗi khi chúng ta mở một terminal mới
+Để tránh tác vụ lặp đi lặp lại này chúng ta sẽ cài đặt chúng cố định bằng việc sử dụng lệnh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gedit</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>Chúng ta có thể cố định cấu hình mạng của ROS và tạo các lệnh nhanh với các lệnh thường được sử dụng.
+'.bashrc' chứa các cài đặt của chúng ta còn gedit làm trình soạn thảo văn bản mặc định để mở. Chú ý '.bashrc'
+chứa nhiều cài đặt quan trọng không thể sủa đổi bạn mở bằng gedit kéo xuống dưới thay thế xxx.xxx.xxx.xxx bằng địa chỉ IP của bạn và đóng gedit lại ngay. Để kiểm tra IP bạn kéo xuống phía dưới của tài liệu để làm theo hướng dẫn.</p>
+<p>Giờ hãy làm theo hướng dẫn nhé</p>
+<p># Set ROS Kinetic:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">source</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>Lệnh này là cài đặt cấu hình cho các file của ROS.</p>
+<p># Set ROS Network:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export ROS_HOSTNAME=xxx.xxx.xxx.xxx
+export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
+</pre></div>
+</div>
+<p>Khi chưa kết nối với robot thật bạn dùng localhost như sau nhé:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">ROS_HOSTNAME</span><span class="o">=</span><span class="n">localhost</span>
+<span class="n">export</span> <span class="n">ROS_MASTER_URI</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">11311</span>
+</pre></div>
+</div>
+<p>Khi bạn cần sử dụng với robot thật bạn sẽ quay lại đây và chỉnh sửa lại cài đặt nhé. Ví dụ địa chỉ IP của bạn là  ‘192.168.1.100’ bạn sẽ làm như sau</p>
+<p># Set ROS Network:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export ROS_HOSTNAME=192.168.1.100
+export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
+</pre></div>
+</div>
+<p>Giờ tiếp tục nào</p>
+<p># Set ROS alias command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">cw</span><span class="o">=</span><span class="s1">&#39;cd ~/catkin_ws&#39;</span>
+<span class="n">alias</span> <span class="n">cs</span><span class="o">=</span><span class="s1">&#39;cd ~/catkin_ws/src&#39;</span>
+<span class="n">alias</span> <span class="n">cm</span><span class="o">=</span><span class="s1">&#39;cd ~/catkin_ws &amp;&amp; catkin_make&#39;</span>
+</pre></div>
+</div>
+<p>Lệnh này là cài đặt lệnh nhanh nhé mọi người.</p>
+<p>Update và lưu tất cả với lệnh sau:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>Hướng dẫn tìm địa chỉ IP</p>
+<a class="reference internal image-reference" href="../_images/anh6.png"><img alt="../_images/anh6.png" src="../_images/anh6.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/anh7.png"><img alt="../_images/anh7.png" src="../_images/anh7.png" style="width: 300px;" /></a>
+</div>
+<div class="section" id="cai-integrated-development-environment-ide">
+<h2>Cài Integrated Development Environment(IDE)<a class="headerlink" href="#cai-integrated-development-environment-ide" title="Permalink to this headline">¶</a></h2>
+<p>IDE:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Là</span> <span class="n">tích</span> <span class="n">hợp</span> <span class="n">môi</span> <span class="n">trường</span> <span class="n">phát</span> <span class="n">triển</span>
+<span class="o">-</span> <span class="n">Cung</span> <span class="n">cấp</span> <span class="n">môi</span> <span class="n">trường</span> <span class="n">phát</span> <span class="n">triển</span> <span class="n">để</span> <span class="n">người</span> <span class="n">dùng</span> <span class="n">có</span> <span class="n">thể</span> <span class="n">thực</span> <span class="n">hiện</span> <span class="n">các</span> <span class="n">tác</span> <span class="n">vụ</span> <span class="n">liên</span> <span class="n">quan</span> <span class="n">đến</span> <span class="n">phát</span> <span class="n">triển</span>
+  <span class="n">chương</span> <span class="n">trình</span><span class="p">:</span> <span class="n">như</span> <span class="n">mã</span> <span class="n">hóa</span><span class="p">,</span> <span class="n">gỡ</span> <span class="n">lỗi</span><span class="p">,</span> <span class="n">biên</span> <span class="n">dịch</span><span class="p">,</span> <span class="n">phân</span> <span class="n">phối</span> <span class="n">trong</span> <span class="n">một</span> <span class="n">chương</span> <span class="n">trình</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">Hầu</span> <span class="n">hết</span> <span class="n">các</span> <span class="n">nhà</span> <span class="n">phát</span> <span class="n">triển</span> <span class="n">có</span> <span class="n">ít</span> <span class="n">nhất</span> <span class="n">một</span> <span class="n">vài</span> <span class="n">IDE</span> <span class="n">yêu</span> <span class="n">thích</span> <span class="n">của</span> <span class="n">họ</span><span class="o">.</span> <span class="n">ROS</span> <span class="n">hỗ</span> <span class="n">trợ</span> <span class="n">nhiều</span> <span class="n">IDE</span><span class="o">.</span>
+  <span class="n">Các</span> <span class="n">IDE</span> <span class="n">được</span> <span class="n">sử</span> <span class="n">dụng</span> <span class="n">phổ</span> <span class="n">biến</span> <span class="n">nhất</span> <span class="n">là</span><span class="p">:</span> <span class="n">Eclipse</span><span class="p">,</span> <span class="n">CodeBlocks</span><span class="p">,</span> <span class="n">Emacs</span><span class="p">,</span> <span class="n">Vim</span><span class="p">,</span> <span class="n">NetBeans</span><span class="p">,</span> <span class="n">QtCreator9</span><span class="o">.</span>
+<span class="o">-</span><span class="n">Công</span> <span class="n">cụ</span> <span class="n">phù</span> <span class="n">hợp</span> <span class="n">nhất</span> <span class="n">cho</span> <span class="n">các</span> <span class="n">tác</span> <span class="n">vụ</span> <span class="n">đơn</span> <span class="n">giản</span> <span class="n">sẽ</span> <span class="n">là</span>
+  <span class="n">Visual</span> <span class="n">Studio</span> <span class="n">Code</span> <span class="n">và</span> <span class="n">để</span> <span class="n">phát</span> <span class="n">triển</span> <span class="n">giao</span> <span class="n">diện</span> <span class="n">GUI</span><span class="p">,</span> <span class="n">đó</span> <span class="n">sẽ</span> <span class="n">là</span> <span class="n">QtCreator</span><span class="o">.</span>
+<span class="o">-</span><span class="n">Phần</span> <span class="n">sau</span> <span class="n">đây</span> <span class="n">chứa</span> <span class="n">thông</span> <span class="n">tin</span> <span class="n">về</span> <span class="n">cách</span> <span class="n">định</span> <span class="n">cấu</span> <span class="n">hình</span> <span class="n">môi</span> <span class="n">trường</span> <span class="n">phát</span> <span class="n">triển</span> <span class="n">ROS</span> <span class="n">với</span> <span class="n">QtCreator</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">qtcreator</span>
+</pre></div>
+</div>
+<p>Mở QtCreator chúng ta dùng lệnh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qtcreator</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cai-moveit">
+<h2>Cài MoveIt<a class="headerlink" href="#cai-moveit" title="Permalink to this headline">¶</a></h2>
+<p>Có một cách cài đặt ROS bằng lệnh khá ngắn nhé các bạn:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosdep</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">dist</span><span class="o">-</span><span class="n">upgrade</span>
+</pre></div>
+</div>
+<p>Cài catkin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">catkin</span> <span class="n">python</span><span class="o">-</span><span class="n">catkin</span><span class="o">-</span><span class="n">tools</span>
+</pre></div>
+</div>
+<p>Các lệnh này thời gian chạy cũng tương tự như thời gian chạy của những hướng dẫn trên. Khi chúng ta nhập một lệnh máy sẽ hướng dẫn chúng ta nhập những lệnh tiếp theo.</p>
+<p>Cài MoveIt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">moveit</span>
+</pre></div>
+</div>
+<p>Giờ các bạn hãy làm theo hướng dẫn xem điều thú vị gì sẽ xảy ra nhé:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">ws_moveit</span><span class="o">/</span><span class="n">src</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit</span><span class="o">/</span><span class="n">src</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">kinetic</span><span class="o">-</span><span class="n">devel</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">moveit_tutorials</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">kinetic</span><span class="o">-</span><span class="n">devel</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">panda_moveit_config</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit</span><span class="o">/</span><span class="n">src</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit</span>
+<span class="n">catkin</span> <span class="n">config</span> <span class="o">--</span><span class="n">extend</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span>
+<span class="n">catkin</span> <span class="n">build</span>
+<span class="n">source</span> <span class="o">~/</span><span class="n">ws_moveit</span><span class="o">/</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">echo</span> <span class="s1">&#39;source ~/ws_moveit/devel/setup.bash&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="n">roslaunch</span> <span class="n">panda_moveit_config</span> <span class="n">demo</span><span class="o">.</span><span class="n">launch</span> <span class="n">rviz_tutorial</span><span class="p">:</span><span class="o">=</span><span class="n">true</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/anh10.png"><img alt="../_images/anh10.png" src="../_images/anh10.png" style="width: 600px;" /></a>
+<p>Bạn thấy một không gian cho robot của bạn như trên</p>
+<ul class="simple">
+<li><p>Trong tab Hiển thị RViz, nhấn ADD:</p></li>
+<li><p>Từ thư mục moveit_ros_visualization, hãy chọn MotionPlanning. Nhấn OK&quot;.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/anh9.png"><img alt="../_images/anh9.png" src="../_images/anh9.png" style="width: 300px;" /></a>
+<p>Bạn sẽ thấy hình robot pan_da hiện ra. Qủa thật quá thú vị phải không các bạn.</p>
+<a class="reference internal image-reference" href="../_images/anh8.png"><img alt="../_images/anh8.png" src="../_images/anh8.png" style="width: 600px;" /></a>
+<p>Những lệnh trên tôi sẽ giải thích chi tiết cho các bạn ở những phần sau. Giờ các bạn hãy thỏa sức mày mò để xem các chức năng trên RViz đi nào.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="overview.html" class="btn btn-neutral float-right" title="Tổng quan về ROS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="paren_introduction/WhatROScando.html" class="btn btn-neutral float-left" title="ROS có thể làm được những gì?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, TranChien
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

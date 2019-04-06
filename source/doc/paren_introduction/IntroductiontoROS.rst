@@ -1,0 +1,17 @@
+Tổng quan về ROS
+================
+
+**Why need ROS?**
+	
+      * ROS framework gathers all supporting software tools and manages how you develop a code for your robot.
+      * Provides all the services (like hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management)
+      * ROS is an OS in concept::
+ 
+         Provides all the services (like hardware abstraction, low-level device control,
+         implementation of commonly-used functionality,
+         message-passing between processes,and package management)
+
+
+
+ 
+									 
