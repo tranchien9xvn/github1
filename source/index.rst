@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-XIN CHÀO CÁC BẠN ĐẾN ĐỂ TÌM HIỂU VỀ ROS
+XIN CHÀO CÁC BẠN ĐẾN VỚI KHO LƯU TRỮ ROS
 =======================================
 
 
