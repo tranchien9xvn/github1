@@ -1,5 +1,5 @@
-Giới thiệu về ROS
-=================
+ROBOT VÀ ROS
+============
 
 .. toctree::
    :maxdepth: 2

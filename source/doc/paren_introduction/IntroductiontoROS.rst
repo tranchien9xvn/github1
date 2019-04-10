@@ -13,5 +13,5 @@ GIỚI THIỆU
  Để có những đóng góp cho ngành kĩ thuật robot nói chung phát triển. ROS sẽ giải quyết vấn đề này. ROS là một hệ điều hành của robot. 
  Nó được phát triển bởi rất nhiều chuyên gia, các nhà khoa học về robot chuyên nghiệp và cả những chuyên gia về khoa học máy tính, 
  các chuyên gia về khoa học phần mềm là những ngành có liên quan. Nó có một cộng đồng để xây dựng và phát triển robot. 
- Tham gia cộng đồng này sẽ rút ngắn thời gian đưa ngành robot của chúng ta tiếp cận ngành robot trên toàn thế giới.
+ Tham gia cộng đồng này sẽ rút ngắn thời gian đưa ngành robot của chúng ta tiếp cận ngành robot trên toàn cầu.
  
