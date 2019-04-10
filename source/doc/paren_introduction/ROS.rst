@@ -6,7 +6,7 @@ GIỚI THIỆU VỀ ROS
  Nó cũng cung cấp các công cụ và thư viện cho việc thu thập, xây dựng, viết và chạy mã trên nhiều máy tính.
 
 HỆ ĐIỀU HÀNH META
-=================
+-----------------
 
  Hệ thống (OS) hoạt động cho các máy tính mục đích chung bao gồm Windows (XP, 7, 8, 10), 
  Linux (Linux Mint, Ubuntu, Fedora, Gentoo) và Mac (OS X Mavericks, Yosemite, El Capitan). 
@@ -32,7 +32,7 @@ HỆ ĐIỀU HÀNH META
    :width: 300px
    
 MỤC TIÊU CỦA ROS
-================
+----------------
 
  Mục tiêu của ROS là “ xây dựng môi trường phát triển cho phép phát triển phần mềm robot với sự cộng tác trên một cấp độ toàn cầu.” 
  ROS tập trung vào việc tối đa hóa việc tái sử dụng code trong việc nghiên cứu và phát triển robot, 
