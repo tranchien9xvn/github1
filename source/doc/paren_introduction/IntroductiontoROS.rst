@@ -1,5 +1,5 @@
-GIỚI THIỆU
-==========
+GIỚI THIỆU CHUNG
+================
 
 ĐÔI NÉT VỀ NGÀNH CÔNG NGHIỆP ROBOT
 ----------------------------------

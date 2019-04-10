@@ -1,4 +1,4 @@
-ROBOT VÀ ROS
+ROBOT v� ROS
 ============
 
 .. toctree::
@@ -6,6 +6,7 @@ ROBOT VÀ ROS
    
    paren_introduction/IntroductiontoROS
    paren_introduction/WhatROScando
+   paren_introduction/ROS
 
    
    
