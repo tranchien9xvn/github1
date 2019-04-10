@@ -1,4 +1,4 @@
-ROBOT và ROS
+ROBOT VÀ ROS
 ============
 
 .. toctree::
