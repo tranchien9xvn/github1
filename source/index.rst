@@ -38,6 +38,7 @@ Cấu trúc của ROS
    :maxdepth: 2
    
    doc2/cacthuatngu
+   doc2/tintruyenthong
    doc2/createpackage
    
    
