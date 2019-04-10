@@ -2,7 +2,7 @@ NỀN TẢNG PHẦN MỀM
 =================
  
  .. image:: paren_introduction/images/anh1a.png
-   :width: 300px
+    :width: 300px
 
  Máy tính cá nhân và điện thoại cá nhân là những loại sản phẩm công nghệ thông tin. Chúng bao gồm module phần cứng cho phép tích hợp các phần cứng khác nhau
  và hệ thống điều hành quản lý phần cứng này. Các phần cứng dựa trên môi trường phát triển phần mềm được cung cấp bởi hệ điều hành có ứng
@@ -12,8 +12,8 @@ NỀN TẢNG PHẦN MỀM
  Người ta có thể nói rằng các yếu tố phổ biến mà cho phép sự thành công của các máy tính hoặc điện thoại cá nhân là sự xuất hiện của hệ điều hành (Windows, Linux, Android, iOS, vv).
  Sự xuất hiện của hệ điều hành phần cứng và phần mềm thống nhất. Dẫn đến các mô đun của phần cứng sản xuất hàng loạt giảm chi phí, phát triển chuyên biệt mang hiệu suất cao.
   
-.. image:: paren_introduction/images/anh2a.png
-   :width: 300px
+ .. image:: paren_introduction/images/anh2a.png
+    :width: 300px
    
  Bên cạnh đó, các kỹ sư có khả năng phát triển các chương trình ứng dụng trong môi trường phát triển được cung cấp bởi hệ điều hành ngay cả khi không một sự hiểu biết thấu đáo về phần cứng.
  Và một nhóm công việc mới gọi là App Developers. Nó không tồn tại thậm chí 10 năm trước đây đã được giới thiệu trong lĩnh vực điện thoại thông minh
@@ -60,9 +60,10 @@ BẠN NÊN SỬ DỤNG NỀN TẢNG PHẦN MỀM ROS
 TƯƠNG LAI MÀ ROS SẼ MANG LẠI
 ----------------------------
 
-.. image:: paren_introduction/images/anh3a.png
+ .. image:: paren_introduction/images/anh3a.png
    :width: 300px
- 
+  
+  
  Như bạn thấy ở trên, nhiều nền tảng phần mềm robot đang xuất hiện, nhưng thật khó để kết luận cái nào là tốt hơn. 
  Lý do là mỗi thứ trong số đó cung cấp các chức năng độc đáo và thuận tiện riêng như việc thêm các tính năng cho robot, 
  tính năng truyền thông, trực quan, mô phỏng, thời gian thực và nhiều hơn nữa. 
