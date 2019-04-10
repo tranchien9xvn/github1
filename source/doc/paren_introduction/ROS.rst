@@ -46,9 +46,39 @@ MỤC TIÊU CỦA ROS
  4. API: Khi phát triển một chương trình sử dụng ROS, ROS được thiết kế để chỉ cần gọi một API và chèn nó một cách dễ dàng vào mã được sử dụng. 
   
   Trong source code giới thiệu trong mỗi chương, bạn sẽ thấy rằng chương trình ROS là không khác nhiều so với C ++ và Python.
+ 5. Hỗ trợ ngôn ngữ lập trình khác nhau: như Python, C ++, và Lisp cũng như ngôn ngữ như JAVA, C # và Ruby. 
+ Nói cách khác, bạn có thể phát triển một chương trình ROS sử dụng một ngôn ngữ lập trình ưa thích của bạn.
+ 
+CÁC THÀNH PHẦN CỦA ROS
+----------------------
+
+ Như đã trình bày trong Hình 2-3, ROS bao gồm một thư viện khách hàng để hỗ trợ nhiều ngôn ngữ lập trình, 
+ giao diện phần cứng để kiểm soát phần cứng, thông tin liên lạc để truyền dữ liệu và tiếp nhận, ứng dụng Khung Robotics để giúp tạo nhiều ứng dụng, 
+ các ứng dụng Robotics là một ứng dụng dịch vụ dựa trên ứng dụng Khung Robotics, công cụ mô phỏng có thể kiểm soát robot trong một không gian ảo, 
+ và công cụ phát triển phần mềm
+
+.. image:: paren_introduction/images/anh6a.png
+   :width: 300px
+   
+  Các thành phần của ROS
+  
+HỆ SINH THÁI
+------------
+
+ Các nhà sản xuất điện thoại thông minh sẽ sản xuất các thiết bị có hỗ trợ giao diện phần cứng của hệ điều hành, 
+ Các công ty hệ điều hành tạo ra một thư viện chung để vận hành các thiết bị từ các nhà sản xuất khác nhau. 
+ Do đó, các nhà phát triển phần mềm có thể sử dụng một số thiết bị mà không hiểu phần cứng để phát triển ứng dụng. 
+ Hệ sinh thái bao gồm việc phân phối các ứng dụng cho người dùng cuối
 
 
+.. image:: paren_introduction/images/anh7a.png
+   :width: 300px
 
+LỊCH SỬ PHÁT TRIỂN CỦA ROS
+--------------------------
+
+CÁC PHIÊN BẢN ROS
+-----------------
 
 
 
