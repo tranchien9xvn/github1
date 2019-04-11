@@ -23,7 +23,7 @@ XIN CHÀO CÁC BẠN ĐẾN VỚI KHO LƯU TRỮ ROS
 ^^^^^^^^
 
 Giới thiệu về ROS?
-^^^^^^^^^^^^^^^^^^
+==================
 
 .. toctree::
    :maxdepth: 2
@@ -34,7 +34,7 @@ Giới thiệu về ROS?
 
 
 Cấu trúc của ROS
-----------------
+================
 
 .. toctree::
    :maxdepth: 2
@@ -44,7 +44,7 @@ Cấu trúc của ROS
    doc2/createpackage
    
 ROS commands
-------------
+============
 
 .. toctree::
    :maxdepth: 2
@@ -55,7 +55,7 @@ ROS commands
 
    
 URDF-GAZEBO
------------
+===========
 
 .. toctree::
    :maxdepth: 2
@@ -63,7 +63,7 @@ URDF-GAZEBO
    doc3/URDF-GAZEBO
 
 MoevIt
-------
+======
 
 .. toctree::
    :maxdepth: 2
@@ -73,7 +73,7 @@ MoevIt
 
 
 Move_group
-----------
+==========
 
 .. toctree::
    :maxdepth: 2
@@ -81,7 +81,7 @@ Move_group
    doc5/Move_group
 
 API++
------
+=====
    
 .. toctree::
    :maxdepth: 2 
@@ -89,7 +89,7 @@ API++
    doc6/API
    
 Descarte
---------
+========
 
 .. toctree::
    :maxdepth: 2 

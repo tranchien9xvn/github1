@@ -87,12 +87,36 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="cacthuatngu.html">Các khái niệm quan trọng của ROS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Truyền thông tin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Truyền thông tin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#topic">Topic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#service">Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#action">Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter">Parameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#message-communication-flow">Message Communication Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#service-request-and-response">Service Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Action</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="createpackage.html">Tạo package</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc2add/ros_commands.html">Ros_commands</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc3/URDF-GAZEBO.html">Urdf_gazebo</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc4/approach.html">Kiến trúc của ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc4/architecture.html">Kiến trúc của MoveIt</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc5/Move_group.html">Move_group</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc6/API.html">API++</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc7/Descarte.html">Descarte</a></li>
 </ul>
 
             
@@ -159,6 +183,175 @@
             
   <div class="section" id="truyen-thong-tin">
 <h1>Truyền thông tin<a class="headerlink" href="#truyen-thong-tin" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../_images/anh2c1.png"><img alt="../_images/anh2c1.png" src="../_images/anh2c1.png" style="width: 400px;" /></a>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kiểu</p></th>
+<th class="head"><p>Đặc điểm</p></th>
+<th class="head"></th>
+<th class="head"><p>Sự miêu tả</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Topic</p></td>
+<td><p>Không đồng bộ</p></td>
+<td><p>Một hướng</p></td>
+<td><dl class="simple">
+<dt>Sử dụng khi trao đổi dữ liệu</dt><dd><p>liên tục</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Service</p></td>
+<td><p>Đồng bộ</p></td>
+<td><p>Hai hướng</p></td>
+<td><dl class="simple">
+<dt>Sử dụng khi yêu cầu xử lý thông tin</dt><dd><p>và đáp ứng trạng thái hiện tại</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><p>Action</p></td>
+<td><p>Không đồng bộ</p></td>
+<td><p>Hai hướng</p></td>
+<td><dl class="simple">
+<dt>Được sử dụng khi rất khó để sử dụng</dt><dd><p>service do thời gian đáp ứng lâu</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="topic">
+<h2>Topic<a class="headerlink" href="#topic" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/anh2c2.png"><img alt="../_images/anh2c2.png" src="../_images/anh2c2.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>Node publisher và node subscriber đăng kí message với master. Khi giống nhau chúng kết nối trực tiếp với nhau.</p></li>
+<li><p>Chủ đề là một chiều, duy trì kết nối gửi và nhận liên tục.</p></li>
+<li><p>Nó phù hợp cho dữ liệu cảm biến.</p></li>
+<li><p>Nhiều thuê bao có thể nhận được thông báo từ một nhà xuất bản và ngược lại.</p></li>
+</ul>
+</div>
+<div class="section" id="service">
+<h2>Service<a class="headerlink" href="#service" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/anh2c3.png"><img alt="../_images/anh2c3.png" src="../_images/anh2c3.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>Truyền thông về dịch vụ là một thông tin liên lạc đồng bộ hai chiều giữa service client yêu cầu một dịch vụ
+và service server đáp ứng yêu cầu như trong hình trên.</p></li>
+<li><p>Khi yêu cầu và phản ứng của các dịch vụ được hoàn thành, kết nối giữa hai nút sẽ bị ngắt kết nối.</p></li>
+<li><p>Một dịch vụ thường được sử dụng để chỉ huy một robot thực hiện một hành động hoặc nút cụ thể nhằm thực hiện các sự kiện nhất định với một điều kiện cụ thể.</p></li>
+</ul>
+</div>
+<div class="section" id="action">
+<h2>Action<a class="headerlink" href="#action" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/anh2c4.png"><img alt="../_images/anh2c4.png" src="../_images/anh2c4.png" style="width: 400px;" /></a>
+<p>Máy khách yêu cầu đến máy chủ một hành động cần một thời gian dài. Máy chủ hành động và thường xuyên gửi những phản hồi về cho máy khách.
+Cuối cùng máy chủ báo nhiệm vụ thành công, máy khách tiếp nhận và ngắt kết nối.</p>
+<a class="reference internal image-reference" href="../_images/anh2c5.png"><img alt="../_images/anh2c5.png" src="../_images/anh2c5.png" style="width: 400px;" /></a>
+<p>Ban đầu các node kết nối với master. master lưu giữ tất cả thông tin của các node. node này sẽ có được lượng thông tin tương đối của node khác thông qua master.
+Sau đó mỗi node kết nối trực tiếp với nhau để thực hiện truyền thông điệp.</p>
+</div>
+<div class="section" id="parameter">
+<h2>Parameter<a class="headerlink" href="#parameter" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="message-communication-flow">
+<h2>Message Communication Flow<a class="headerlink" href="#message-communication-flow" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>chạy Master</p></li>
+</ol>
+<blockquote>
+<div><p>Master phải được chạy đầu tiên. Các master trong ROS được điều hành bằng cách sử dụng lệnh 'roscore'
+và chạy máy chủ với XmlRpc. Các master đăng ký tên của các nút, các chủ đề, dịch vụ, hành động, các loại tin nhắn,
+địa chỉ URI và cổng cho các kết nối node-to-node, và chuyển tiếp thông tin đến các nút khác theo yêu cầu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$roscore
+</pre></div>
+</div>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c6.png"><img alt="../_images/anh2c6.png" src="../_images/anh2c6.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>Chạy Node Subscriber</p></li>
+</ol>
+<blockquote>
+<div><p>Chạy node subscriber bằng lệnh  rosrun hoặc roslaunch. Node subscriber đăng kí tên node của nó, tên topic, loại message, địa chỉ URI,
+và cổng với master khi nó chạy. Các master và node giao sử dụng XmlRpc.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c7.png"><img alt="../_images/anh2c7.png" src="../_images/anh2c7.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>Chạy Node Publisher</p></li>
+</ol>
+<blockquote>
+<div><p>Để chạy node publisher chúng ta cũng sử dụng lệnh 'rosrun' hoặc 'roslaunch' như node subscriber.
+Node publisher đăng ký tên node, tên topic, loại message, địa chỉ và cổng URI của nó với các master.
+Các master và node giao sử dụng XmlRpc.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c8.png"><img alt="../_images/anh2c8.png" src="../_images/anh2c8.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>Cung cấp thông tin publisher cho subscriber</p></li>
+</ol>
+<blockquote>
+<div><p>Các master phân phối thông tin như tên của publisher, tên topic, loại message, địa chỉ URI và số cổng của publisher
+cho các subscriber mà muốn kết nối đến node publisher. Các master và node giao sử dụng XmlRpc.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c9.png"><img alt="../_images/anh2c9.png" src="../_images/anh2c9.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>Yêu cầu kết nối từ Node Subscriber</p></li>
+</ol>
+<blockquote>
+<div><p>node subscriber yêu cầu một kết nối trực tiếp đến node publisher dựa trên thông tin subscriber nhận được từ các master.
+Trong thủ tục yêu cầu, node subscriber truyền thông tin đến node publisher như
+tên node subscriber, tên topic, và các message. node publisher và các node subscriber sử dụng XmlRpc.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c10.png"><img alt="../_images/anh2c10.png" src="../_images/anh2c10.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>Kết nối Phản hồi từ Node Publisher</p></li>
+</ol>
+<blockquote>
+<div><p>Node publisher gửi các địa chỉ URI và số cổng của server TCP của nó để đáp ứng với yêu cầu kết nối từ node subscriber. Nút nhà xuất bản và các nút giao thuê bao sử dụng XmlRpc.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c11.png"><img alt="../_images/anh2c11.png" src="../_images/anh2c11.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p>kết nối TCPROS</p></li>
+</ol>
+<blockquote>
+<div><p>Node subscriber tạo ra một client cho các node publisher sử dụng TCPROS, và kết nối đến node publisher.
+Tại thời điểm này, thông tin liên lạc giữa các nút sử dụng giao thức TCP / IP dựa trên giao thức gọi là TCPROS.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c12.png"><img alt="../_images/anh2c12.png" src="../_images/anh2c12.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="8">
+<li><p>Truyền tin</p></li>
+</ol>
+<blockquote>
+<div><p>node publisher phát đi một message được xác định trước đến node subscriber. Các thông tin liên lạc giữa các nút sử dụng TCPROS.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/anh2c13.png"><img alt="../_images/anh2c13.png" src="../_images/anh2c13.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="service-request-and-response">
+<h2>Service Request and Response<a class="headerlink" href="#service-request-and-response" title="Permalink to this headline">¶</a></h2>
+<p>Thủ tục thảo luận ở trên tương ứng với các thông tin liên lạc là Topic. Thông tin liên lạc  topic publish và subscribe các message liên tục,
+trừ trường hợp publisher hoặc subscriber bị chấm dứt.</p>
+<p>Dịch vụ thì có 2 loại hình thức
+* Service Client: Request service and receive response
+* Service Server: Receive a service, execute the specified task, and return a response</p>
+<p>Kết nối giữa service server and client cũng giống như kết nối TCPROS cho publisher and subscriber được mô tả ở trên.
+Khác với topic, các service chấm dứt kết nối sau khi request và response thành công.
+Nếu yêu cầu bổ sung là cần thiết, các thủ tục liên quan phải được thực hiện một lần nữa.</p>
+<a class="reference internal image-reference" href="../_images/anh2c14.png"><img alt="../_images/anh2c14.png" src="../_images/anh2c14.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id1">
+<h2>Action<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/anh2c14.png"><img alt="../_images/anh2c14.png" src="../_images/anh2c14.png" style="width: 400px;" /></a>
+<p>Bạn nghĩ nó giống service nhưng thực chất nó giống topic hơn. nếu bạn dùng lệnh runtopic nó sẽ liệt kê ra 5 topic trong đó gồm có: mục tiêu,
+trạng thái, hủy bỏ, kết quả, và phản hồi được sử dụng trong action. Kết nối TCPROS cũng tương tự chỉ khác là khi client gửi lệnh hủy bỏ hoặc server gửi kết quả
+thì sẽ ngắt kết nối.</p>
+<p>Ví dụ về truyền thông tinw</p>
+<a class="reference internal image-reference" href="../_images/anh2c14.png"><img alt="../_images/anh2c14.png" src="../_images/anh2c14.png" style="width: 400px;" /></a>
+</div>
 </div>
 
 
