@@ -1,4 +1,4 @@
-GIỚI THIỆU CHUNG
+Giới thiệu chung
 ================
 
 ĐÔI NÉT VỀ NGÀNH CÔNG NGHIỆP ROBOT

@@ -1,4 +1,4 @@
-GIỚI THIỆU VỀ ROS
+Giới thiệu về ROS
 =================
 
  ROS là một hệ điều hành mã nguồn mở. Nó cung cấp các hoạt động mà bạn mong chờ từ một hệ điều hành, bao gồm trừu tượng phần cứng, 

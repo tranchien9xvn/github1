@@ -1,4 +1,4 @@
-NỀN TẢNG PHẦN MỀM
+Nền tảng phần mềm
 =================
  
  .. image:: paren_introduction/images/anh1a.png
