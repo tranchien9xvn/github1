@@ -43,6 +43,14 @@ Cấu trúc của ROS
    doc2/tintruyenthong
    doc2/createpackage
    
+ROS commands
+------------
+
+.. toctree::
+   :maxdepth: 2
+   
+   doc2add/ros_commands
+   
    
 
    
@@ -51,6 +59,8 @@ URDF-GAZEBO
 
 .. toctree::
    :maxdepth: 2
+   
+   doc3/URDF-GAZEBO
 
 MoevIt
 ------
@@ -62,18 +72,29 @@ MoevIt
    doc4/architecture
 
 
-Move-group
+Move_group
 ----------
 
 .. toctree::
    :maxdepth: 2
+   
+   doc5/Move_group
 
 API++
 -----
    
 .. toctree::
    :maxdepth: 2 
+   
+   doc6/API
+   
+Descarte
+--------
 
+.. toctree::
+   :maxdepth: 2 
+   
+   doc7/Descarte
 
 Indices and tables
 ==================
