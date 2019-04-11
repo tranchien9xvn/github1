@@ -51,7 +51,7 @@ Máy khách yêu cầu đến máy chủ một hành động cần một thời 
 Cuối cùng máy chủ báo nhiệm vụ thành công, máy khách tiếp nhận và ngắt kết nối.
 
 .. image:: images2/anh2c5.png
-   :width: 400px
+   :width: 300px
    
 Ban đầu các node kết nối với master. master lưu giữ tất cả thông tin của các node. node này sẽ có được lượng thông tin tương đối của node khác thông qua master.
 Sau đó mỗi node kết nối trực tiếp với nhau để thực hiện truyền thông điệp.
@@ -72,7 +72,7 @@ Message Communication Flow
    $roscore
   
 .. image:: images2/anh2c6.png
-   :width: 400px
+   :width: 300px
 
 2. Chạy Node Subscriber
 
@@ -80,7 +80,7 @@ Message Communication Flow
  và cổng với master khi nó chạy. Các master và node giao sử dụng XmlRpc.
 
 .. image:: images2/anh2c7.png
-   :width: 400px
+   :width: 300px
 
 
 3. Chạy Node Publisher
@@ -90,7 +90,7 @@ Message Communication Flow
  Các master và node giao sử dụng XmlRpc.
 
 .. image:: images2/anh2c8.png
-   :width: 400px
+   :width: 300px
 
 4. Cung cấp thông tin publisher cho subscriber
 
@@ -98,7 +98,7 @@ Message Communication Flow
  cho các subscriber mà muốn kết nối đến node publisher. Các master và node giao sử dụng XmlRpc.
  
 .. image:: images2/anh2c9.png
-   :width: 400px
+   :width: 300px
    
 5. Yêu cầu kết nối từ Node Subscriber
 
@@ -107,14 +107,14 @@ Message Communication Flow
  tên node subscriber, tên topic, và các message. node publisher và các node subscriber sử dụng XmlRpc.
  
 .. image:: images2/anh2c10.png
-   :width: 400px
+   :width: 300px
 
 6. Kết nối Phản hồi từ Node Publisher
 
  Node publisher gửi các địa chỉ URI và số cổng của server TCP của nó để đáp ứng với yêu cầu kết nối từ node subscriber. Nút nhà xuất bản và các nút giao thuê bao sử dụng XmlRpc.
  
 .. image:: images2/anh2c11.png
-   :width: 400px
+   :width: 300px
    
 7. kết nối TCPROS
 
@@ -122,14 +122,14 @@ Message Communication Flow
  Tại thời điểm này, thông tin liên lạc giữa các nút sử dụng giao thức TCP / IP dựa trên giao thức gọi là TCPROS.
  
 .. image:: images2/anh2c12.png
-   :width: 400px
+   :width: 300px
    
 8. Truyền tin
 
  node publisher phát đi một message được xác định trước đến node subscriber. Các thông tin liên lạc giữa các nút sử dụng TCPROS.
    
 .. image:: images2/anh2c13.png
-   :width: 400px
+   :width: 300px
 
 Service Request and Response
 ----------------------------
@@ -146,14 +146,14 @@ Khác với topic, các service chấm dứt kết nối sau khi request và res
 Nếu yêu cầu bổ sung là cần thiết, các thủ tục liên quan phải được thực hiện một lần nữa.
 
 .. image:: images2/anh2c14.png
-   :width: 400px
+   :width: 300px
    
 
 Action
 ------
 
 .. image:: images2/anh2c14.png
-   :width: 400px
+   :width: 300px
    
 Bạn nghĩ nó giống service nhưng thực chất nó giống topic hơn. nếu bạn dùng lệnh runtopic nó sẽ liệt kê ra 5 topic trong đó gồm có: mục tiêu, 
 trạng thái, hủy bỏ, kết quả, và phản hồi được sử dụng trong action. Kết nối TCPROS cũng tương tự chỉ khác là khi client gửi lệnh hủy bỏ hoặc server gửi kết quả
@@ -162,7 +162,7 @@ thì sẽ ngắt kết nối.
 Ví dụ về truyền thông tinw
 
 .. image:: images2/anh2c14.png
-   :width: 400px
+   :width: 300px
  
 
    
