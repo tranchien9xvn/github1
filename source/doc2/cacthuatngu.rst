@@ -197,41 +197,92 @@ bag
 ROS Wiki
 --------
  
+ 
+ 
 Repository
 ----------
+
+ Một source package  xác định kho trong trang Wiki. Kho là một địa chỉ URL trên web nơi mà các package được lưu. 
+ Kho quản lý các vấn đề, phát triển, tải về, và các tính năng khác sử dụng hệ thống kiểm soát phiên bản như svn, hg và git. 
+ Nhiều người dùng ROS hiện có đang sử dụng GitHub như kho cho source code. Để xem nội dung của các source code cho từng package, kiểm tra Repository tương ứng.
  
 Graph
 -----
+
+ Mối quan hệ giữa các node, các topic, publisher, và subscriber giới thiệu ở trên có thể được hình dung như một đồ thị. 
+ Các đại diện đồ họa của messages không bao gồm các service như nó chỉ xảy ra một lần. 
+ Đồ thị có thể được hiển thị bằng cách chạy nút 'rqt_graph' trong gói 'rqt_graph'. 
+ Có hai lệnh thực hiện, 'rqt_graph' và 'rosrun rqt_graph rqt_graph'.
  
 Name
 ----
+
+ Node, parameter, topic và service đều có tên . Những tên đã được đăng ký trên master và tìm kiếm theo tên 
+ để chuyển thông điệp khi sử dụng các thông số, chủ đề và các dịch vụ của mỗi nút. Tên rất linh hoạt vì họ có 
+ thể được thay đổi khi được thực thi, và tên gọi khác nhau có thể được gán khi thực hiện các nút giống hệt nhau, 
+ các thông số, chủ đề và các dịch vụ nhiều lần. Sử dụng tên làm cho ROS phù hợp cho các dự án quy mô lớn và hệ thống phức tạp.
  
 Client Library
 --------------
  
+ ROS cung cấp môi trường phát triển cho các ngôn ngữ khác nhau bằng cách sử dụng thư viện khách hàng 
+ để giảm sự phụ thuộc vào ngôn ngữ sử dụng. Các client library chính là C ++, Python, Lisp, và 
+ ngôn ngữ khác như Java, Lua, NET, EusLisp, và R cũng được hỗ trợ. Với mục đích này, các thư viện client như 
+ roscpp, rospy, roslisp, rosjava, roslua, roscs, roseus, Pharos, và rosR đã được phát triển.
+ 
 URI
 ---
+ 
+ Một URI (Uniform Resource Identifier) là một địa chỉ duy nhất đại diện cho một nguồn tài nguyên trên Internet. 
+ URI là một trong những thành phần cơ bản cho phép tương tác với Internet và được sử dụng như một định danh trong giao thức Internet.
  
 MD5
 ---
  
+ MD5 (Message-Digest thuật toán 5) là mã hóa hàm băm 128 bit. Nó được sử dụng chủ yếu để xác minh tính toàn vẹn dữ liệu, 
+ chẳng hạn như kiểm tra với các chương trình hoặc các tập tin ở dạng ban đầu chưa sửa đổi của nó. 
+ Tính toàn vẹn của thông điệp truyền và nhận trong ROS được xác minh với MD5.
+ 
 RPC
 ---
+ 
+ RPC (Remote Procedure Call)  là viết tắt của chức năng gọi một thủ tục con trên một máy tính từ xa từ một máy tính khác trong mạng. 
+ RPC sử dụng các giao thức như TCP / IP và IPX, và cho phép thực hiện các chức năng hoặc các thủ tục mà không cần phải lập trình viên 
+ viết một chương trình cho phép điều khiển từ xa.
  
 XML
 ---
  
+ XML (Extensible Markup Language) là một ngôn ngữ đánh dấu mở rộng và linh hoạt mà W3C 
+ khuyến cáo cho việc tạo ra ngôn ngữ đánh dấu mục đích đặc biệt khác. XML sử dụng thẻ để mô tả cấu trúc của dữ liệu. 
+ Trong ROS, nó được sử dụng trong nhiều thành phần như * .launch, * .urdf, và package.xml.
+ 
 XMLRPC
 ------
+ 
+ XmlRpc (XML-Remote Procedure Call) là một loại giao thức RPC sử dụng XML như là định dạng mã hóa và sử dụng theo yêu cầu và đáp ứng phương pháp của giao thức HTTP mà 
+ không duy trì cũng không kiểm tra kết nối. XmlRpc là một giao thức rất đơn giản, chỉ được sử dụng để xác định kiểu dữ liệu nhỏ hoặc lệnh. Kết quả là, 
+ XmlRpc là rất nhẹ và hỗ trợ nhiều ngôn ngữ lập trình, làm cho nó rất thích hợp cho ROS, mà hỗ trợ một loạt các phần cứng và ngôn ngữ
  
 TCP/IP
 ------
  
+ TCP là viết tắt của Transmission Control Protocol. Nó thường được gọi là TCP / IP. TCP là viết tắt của Transmission Control Protocol. 
+ Nó đảm bảo việc truyền tải và nhận dữ liệu liên tục trong truyền tải lớp giao thức internet.
+ 
+ TCPROS là một định dạng thông điệp dựa trên giao thức TCP / IP và UDPROS là một định dạng thông điệp dựa trên UDP. TCPROS được dùng thường hơn trong ROS.
+ 
 CMakeLists.txt
 --------------
  
+ Catkin xây dựng hệ thống của ROS, sử dụng CMake theo mặc định. Môi trường xây dựng được quy định trong 'CMakeLists.txt'  nằm trong mỗi file package.
+
+
+ 
 package.xml
 -----------
+
+ Chứa thông tin mô tả tên gói, tác giả, giấy phép, và các gói phụ thuộc.
  
  
  
