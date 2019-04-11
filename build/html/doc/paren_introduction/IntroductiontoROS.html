@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tổng quan về ROS &mdash; Tài liệu ROSNV 0.1</title>
+  <title>Giới thiệu chung &mdash; Tài liệu ROSNV 0.1</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Tìm Kiếm" href="../../search.html" />
-    <link rel="next" title="ROS có thể làm được những gì?" href="WhatROScando.html" />
-    <link rel="prev" title="Giới thiệu về ROS" href="../introduction.html" /> 
+    <link rel="next" title="Nền tảng phần mềm" href="WhatROScando.html" />
+    <link rel="prev" title="Robot v? ROS" href="../introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,13 +82,25 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">Giới thiệu về ROS</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Tổng quan về ROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="WhatROScando.html">ROS có thể làm được những gì?</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">Robot v? ROS</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Giới thiệu chung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#doi-net-ve-nganh-cong-nghiep-robot">ĐÔI NÉT VỀ NGÀNH CÔNG NGHIỆP ROBOT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="WhatROScando.html">Nền tảng phần mềm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ROS.html">Giới thiệu về ROS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Hướng dẫn cài đặt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview.html">Tổng quan về ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../doc2/cacthuatngu.html">Các khái niệm quan trọng của ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc2/tintruyenthong.html">TRUYỀN THÔNG TIN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc2/createpackage.html">Tạo package</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../doc4/approach.html">Kiến trúc của ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../doc4/architecture.html">Kiến trúc của MoveIt</a></li>
 </ul>
 
             
@@ -134,9 +146,9 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../introduction.html">Giới thiệu về ROS</a> &raquo;</li>
+          <li><a href="../introduction.html">Robot v? ROS</a> &raquo;</li>
         
-      <li>Tổng quan về ROS</li>
+      <li>Giới thiệu chung</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,22 +167,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tong-quan-ve-ros">
-<h1>Tổng quan về ROS<a class="headerlink" href="#tong-quan-ve-ros" title="Permalink to this headline">¶</a></h1>
-<p><strong>Why need ROS?</strong></p>
+  <div class="section" id="gioi-thieu-chung">
+<h1>Giới thiệu chung<a class="headerlink" href="#gioi-thieu-chung" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="doi-net-ve-nganh-cong-nghiep-robot">
+<h2>ĐÔI NÉT VỀ NGÀNH CÔNG NGHIỆP ROBOT<a class="headerlink" href="#doi-net-ve-nganh-cong-nghiep-robot" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul>
-<li><p>ROS framework gathers all supporting software tools and manages how you develop a code for your robot.</p></li>
-<li><p>Provides all the services (like hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management)</p></li>
-<li><p>ROS is an OS in concept:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Provides</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">services</span> <span class="p">(</span><span class="n">like</span> <span class="n">hardware</span> <span class="n">abstraction</span><span class="p">,</span> <span class="n">low</span><span class="o">-</span><span class="n">level</span> <span class="n">device</span> <span class="n">control</span><span class="p">,</span>
-<span class="n">implementation</span> <span class="n">of</span> <span class="n">commonly</span><span class="o">-</span><span class="n">used</span> <span class="n">functionality</span><span class="p">,</span>
-<span class="n">message</span><span class="o">-</span><span class="n">passing</span> <span class="n">between</span> <span class="n">processes</span><span class="p">,</span><span class="ow">and</span> <span class="n">package</span> <span class="n">management</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-</ul>
+<div><p>Robot là một thuật ngữ không mấy xa lạ với ngành khoa học ở nước ta.
+Mặc dù đã xuất hiện từ rất sớm thông qua các kiến thức khoa học như Robotics
+nhưng chúng ta vẫn không có nhiều phát triển trong lĩnh vực này. Có nhiều sản phẩm được nghiêm cứu và chế tạo nó vẫn
+là những sản phẩm thô sơ và rất khó đưa vào thực tiễn. Chúng ta khẳng định để đưa robot vào trong kinh doanh là một điều cực kì khó khăn
+không chỉ ở nước ta mà còn trên phạm vi toàn thế giới ngoại trừ robot công nghiệp. Trong thời đại cách mạng công nghiệp 4.0 chúng ta cần đẩy mạnh
+việc nghiên cứu và phát triển robot để đưa kĩ thuật robot của nước ta ngang hàng với kĩ thuật phát triển robot trên thế giới.
+Để có những đóng góp cho ngành kĩ thuật robot nói chung phát triển. ROS sẽ giải quyết vấn đề này. ROS là một hệ điều hành của robot.
+Nó được phát triển bởi rất nhiều chuyên gia, các nhà khoa học về robot chuyên nghiệp và cả những chuyên gia về khoa học máy tính,
+các chuyên gia về khoa học phần mềm là những ngành có liên quan. Nó có một cộng đồng để xây dựng và phát triển robot.
+Tham gia cộng đồng này sẽ rút ngắn thời gian đưa ngành robot của chúng ta tiếp cận ngành robot trên toàn cầu.</p>
 </div></blockquote>
+</div>
 </div>
 
 
@@ -181,10 +194,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="WhatROScando.html" class="btn btn-neutral float-right" title="ROS có thể làm được những gì?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="WhatROScando.html" class="btn btn-neutral float-right" title="Nền tảng phần mềm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../introduction.html" class="btn btn-neutral float-left" title="Giới thiệu về ROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../introduction.html" class="btn btn-neutral float-left" title="Robot v? ROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@ Cách 1: Cài đặt chung
 
 1. Cài git
 
- Để tải trực tiếp trong Linux, bạn sẽ cần cài đặt git. Mở terminal và cài đặt git như sau::  
+ Để download tài liệu bạn sẽ cần cài đặt git. Mở terminal và cài đặt git như sau::  
 
     sudo apt-get install git
 

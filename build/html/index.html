@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>XIN CHÀO CÁC BẠN ĐẾN ĐÂY ĐỂ LÀM QUEN VỚI ROS &mdash; Tài liệu ROSNV 0.1</title>
+  <title>XIN CHÀO CÁC BẠN ĐẾN VỚI KHO LƯU TRỮ ROS &mdash; Tài liệu ROSNV 0.1</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Tìm Kiếm" href="search.html" />
-    <link rel="next" title="Giới thiệu về ROS" href="doc/introduction.html" /> 
+    <link rel="next" title="Robot v? ROS" href="doc/introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,10 +81,12 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="doc/introduction.html">Giới thiệu về ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/introduction.html">Robot v? ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/install.html">Hướng dẫn cài đặt</a></li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="doc2/cacthuatngu.html">Các khái niệm quan trọng của ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc2/tintruyenthong.html">TRUYỀN THÔNG TIN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc2/createpackage.html">Tạo package</a></li>
 </ul>
 <ul>
@@ -135,7 +137,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>XIN CHÀO CÁC BẠN ĐẾN ĐÂY ĐỂ LÀM QUEN VỚI ROS</li>
+      <li>XIN CHÀO CÁC BẠN ĐẾN VỚI KHO LƯU TRỮ ROS</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,8 +156,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="xin-chao-cac-ban-den-day-de-lam-quen-voi-ros">
-<h1>XIN CHÀO CÁC BẠN ĐẾN ĐÂY ĐỂ LÀM QUEN VỚI ROS<a class="headerlink" href="#xin-chao-cac-ban-den-day-de-lam-quen-voi-ros" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="xin-chao-cac-ban-den-voi-kho-luu-tru-ros">
+<h1>XIN CHÀO CÁC BẠN ĐẾN VỚI KHO LƯU TRỮ ROS<a class="headerlink" href="#xin-chao-cac-ban-den-voi-kho-luu-tru-ros" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Ghi chú</p>
 <p>Tài liệu này chỉ được phép lưu hành nội bộ</p>
@@ -174,9 +176,10 @@
 <h2>Giới thiệu về ROS?<a class="headerlink" href="#gioi-thieu-ve-ros" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="doc/introduction.html">Giới thiệu về ROS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="doc/paren_introduction/IntroductiontoROS.html">Tổng quan về ROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc/paren_introduction/WhatROScando.html">ROS có thể làm được những gì?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/introduction.html">Robot v? ROS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doc/paren_introduction/IntroductiontoROS.html">Giới thiệu chung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc/paren_introduction/WhatROScando.html">Nền tảng phần mềm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc/paren_introduction/ROS.html">Giới thiệu về ROS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="doc/install.html">Hướng dẫn cài đặt</a><ul>
@@ -193,6 +196,45 @@
 <h3>Cấu trúc của ROS<a class="headerlink" href="#cau-truc-cua-ros" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="doc2/cacthuatngu.html">Các khái niệm quan trọng của ROS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#master">MASTER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#node">NODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#package">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#metapackage">METAPACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#message">MESSAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#topic">TOPIC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#publish-and-publisher">PUBLISH AND PUBLISHER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#subscribe-and-subscriber">SUBSCRIBE AND SUBSCRIBER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#service">SERVICE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#service-server">SERVICE SERVER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#service-client">SERVICE CLIENT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#action">ACTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#action-server">ACTION SERVER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#action-client">ACTION CLIENT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#parameter">PARAMETER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#parameter-server">PARAMETER SERVER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#catkin">CATKIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#ros-build">ROS BUILD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#roscore">roscore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#rosrun">rosrun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#roslaunch">roslaunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#bag">bag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#ros-wiki">ROS Wiki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#repository">Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#graph">Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#name">Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#client-library">Client Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#uri">URI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#md5">MD5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#rpc">RPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#xml">XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#xmlrpc">XMLRPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#tcp-ip">TCP/IP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#cmakelists-txt">CMakeLists.txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc2/cacthuatngu.html#package-xml">package.xml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="doc2/tintruyenthong.html">TRUYỀN THÔNG TIN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc2/createpackage.html">Tạo package</a></li>
 </ul>
 </div>
@@ -249,7 +291,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="doc/introduction.html" class="btn btn-neutral float-right" title="Giới thiệu về ROS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="doc/introduction.html" class="btn btn-neutral float-right" title="Robot v? ROS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

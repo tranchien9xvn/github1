@@ -1,7 +1,7 @@
 Nền tảng phần mềm
 =================
  
- .. image:: paren_introduction/images/anh1a.png
+ .. image:: images/anh1a.png
     :width: 300px
 
  Máy tính cá nhân và điện thoại cá nhân là những loại sản phẩm công nghệ thông tin. Chúng bao gồm module phần cứng cho phép tích hợp các phần cứng khác nhau
@@ -12,7 +12,7 @@ Nền tảng phần mềm
  Người ta có thể nói rằng các yếu tố phổ biến mà cho phép sự thành công của các máy tính hoặc điện thoại cá nhân là sự xuất hiện của hệ điều hành (Windows, Linux, Android, iOS, vv).
  Sự xuất hiện của hệ điều hành phần cứng và phần mềm thống nhất. Dẫn đến các mô đun của phần cứng sản xuất hàng loạt giảm chi phí, phát triển chuyên biệt mang hiệu suất cao.
   
- .. image:: paren_introduction/images/anh2a.png
+ .. image:: images/anh2a.png
     :width: 300px
    
  Bên cạnh đó, các kỹ sư có khả năng phát triển các chương trình ứng dụng trong môi trường phát triển được cung cấp bởi hệ điều hành ngay cả khi không một sự hiểu biết thấu đáo về phần cứng.
@@ -60,7 +60,7 @@ BẠN NÊN SỬ DỤNG NỀN TẢNG PHẦN MỀM ROS
 TƯƠNG LAI MÀ ROS SẼ MANG LẠI
 ----------------------------
 
- .. image:: paren_introduction/images/anh3a.png
+ .. image:: images/anh3a.png
    :width: 300px
   
   
