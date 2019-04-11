@@ -11,7 +11,7 @@ XIN CHÀO CÁC BẠN ĐẾN VỚI KHO LƯU TRỮ ROS
 .. note:: Tài liệu này chỉ được phép lưu hành nội bộ
 
 
-.. Nhóm **ROSNV** gồm những thành viên::
+Nhóm **ROSNV** gồm những thành viên::
 
     ĐÀO VIỆT TÚ
     HUY HUST
