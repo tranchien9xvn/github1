@@ -1,5 +1,5 @@
-Robot và ROS
-============
+Robot and ROS
+=============
 
 .. toctree::
    :maxdepth: 2
