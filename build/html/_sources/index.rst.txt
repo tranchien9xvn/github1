@@ -43,6 +43,17 @@ Cấu trúc của ROS
    doc2/tintruyenthong
    doc2/createpackage
    
+Nhật kí họp nhóm
+================
+
+.. toctree::
+   :maxdepth: 2
+   
+   doc8/nhatki
+ 
+
+   
+   
 ROS commands
 ============
 
