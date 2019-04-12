@@ -88,13 +88,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="cacthuatngu.html">Các khái niệm quan trọng của ROS</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Truyền thông tin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#topic">Topic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#service">Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#action">Action</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#parameter">Parameter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#message-communication-flow">Message Communication Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#service-request-and-response">Service Request and Response</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name">Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-transformation-tf">Coordinate Transformation (TF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-library">Client Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#communication-between-heterogenous-devices">Communication between Heterogenous Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-system">File System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-system">Build System</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="createpackage.html">Tạo package</a></li>
@@ -228,40 +227,39 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="topic">
-<h2>Topic<a class="headerlink" href="#topic" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/anh2c2.png"><img alt="../_images/anh2c2.png" src="../_images/anh2c2.png" style="width: 400px;" /></a>
 <ul class="simple">
+<li><p>Topic</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/anh2c2.png"><img alt="../_images/anh2c2.png" src="../_images/anh2c2.png" style="width: 400px;" /></a>
+<ol class="arabic simple">
 <li><p>Node publisher và node subscriber đăng kí message với master. Khi giống nhau chúng kết nối trực tiếp với nhau.</p></li>
 <li><p>Chủ đề là một chiều, duy trì kết nối gửi và nhận liên tục.</p></li>
 <li><p>Nó phù hợp cho dữ liệu cảm biến.</p></li>
 <li><p>Nhiều thuê bao có thể nhận được thông báo từ một nhà xuất bản và ngược lại.</p></li>
-</ul>
-</div>
-<div class="section" id="service">
-<h2>Service<a class="headerlink" href="#service" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/anh2c3.png"><img alt="../_images/anh2c3.png" src="../_images/anh2c3.png" style="width: 400px;" /></a>
+</ol>
 <ul class="simple">
+<li><p>Service</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/anh2c3.png"><img alt="../_images/anh2c3.png" src="../_images/anh2c3.png" style="width: 400px;" /></a>
+<ol class="arabic simple">
 <li><p>Truyền thông về dịch vụ là một thông tin liên lạc đồng bộ hai chiều giữa service client yêu cầu một dịch vụ
 và service server đáp ứng yêu cầu như trong hình trên.</p></li>
 <li><p>Khi yêu cầu và phản ứng của các dịch vụ được hoàn thành, kết nối giữa hai nút sẽ bị ngắt kết nối.</p></li>
 <li><p>Một dịch vụ thường được sử dụng để chỉ huy một robot thực hiện một hành động hoặc nút cụ thể nhằm thực hiện các sự kiện nhất định với một điều kiện cụ thể.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Action</p></li>
 </ul>
-</div>
-<div class="section" id="action">
-<h2>Action<a class="headerlink" href="#action" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/anh2c4.png"><img alt="../_images/anh2c4.png" src="../_images/anh2c4.png" style="width: 400px;" /></a>
 <p>Máy khách yêu cầu đến máy chủ một hành động cần một thời gian dài. Máy chủ hành động và thường xuyên gửi những phản hồi về cho máy khách.
 Cuối cùng máy chủ báo nhiệm vụ thành công, máy khách tiếp nhận và ngắt kết nối.</p>
 <a class="reference internal image-reference" href="../_images/anh2c5.png"><img alt="../_images/anh2c5.png" src="../_images/anh2c5.png" style="width: 300px;" /></a>
 <p>Ban đầu các node kết nối với master. master lưu giữ tất cả thông tin của các node. node này sẽ có được lượng thông tin tương đối của node khác thông qua master.
 Sau đó mỗi node kết nối trực tiếp với nhau để thực hiện truyền thông điệp.</p>
-</div>
-<div class="section" id="parameter">
-<h2>Parameter<a class="headerlink" href="#parameter" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="message-communication-flow">
-<h2>Message Communication Flow<a class="headerlink" href="#message-communication-flow" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Parameter</p></li>
+<li><p>Message Communication Flow</p></li>
+</ul>
 <ol class="arabic simple">
 <li><p>chạy Master</p></li>
 </ol>
@@ -330,9 +328,7 @@ Tại thời điểm này, thông tin liên lạc giữa các nút sử dụng g
 <div><p>node publisher phát đi một message được xác định trước đến node subscriber. Các thông tin liên lạc giữa các nút sử dụng TCPROS.</p>
 </div></blockquote>
 <a class="reference internal image-reference" href="../_images/anh2c13.png"><img alt="../_images/anh2c13.png" src="../_images/anh2c13.png" style="width: 300px;" /></a>
-</div>
-<div class="section" id="service-request-and-response">
-<h2>Service Request and Response<a class="headerlink" href="#service-request-and-response" title="Permalink to this headline">¶</a></h2>
+<p><strong>Service Request and Response</strong></p>
 <p>Thủ tục thảo luận ở trên tương ứng với các thông tin liên lạc là Topic. Thông tin liên lạc  topic publish và subscribe các message liên tục,
 trừ trường hợp publisher hoặc subscriber bị chấm dứt.</p>
 <p>Dịch vụ thì có 2 loại hình thức
@@ -342,15 +338,72 @@ trừ trường hợp publisher hoặc subscriber bị chấm dứt.</p>
 Khác với topic, các service chấm dứt kết nối sau khi request và response thành công.
 Nếu yêu cầu bổ sung là cần thiết, các thủ tục liên quan phải được thực hiện một lần nữa.</p>
 <a class="reference internal image-reference" href="../_images/anh2c14.png"><img alt="../_images/anh2c14.png" src="../_images/anh2c14.png" style="width: 300px;" /></a>
-</div>
-<div class="section" id="id1">
-<h2>Action<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><strong>Action được thực hiện</strong></p>
 <a class="reference internal image-reference" href="../_images/anh2c14.png"><img alt="../_images/anh2c14.png" src="../_images/anh2c14.png" style="width: 300px;" /></a>
 <p>Bạn nghĩ nó giống service nhưng thực chất nó giống topic hơn. nếu bạn dùng lệnh runtopic nó sẽ liệt kê ra 5 topic trong đó gồm có: mục tiêu,
 trạng thái, hủy bỏ, kết quả, và phản hồi được sử dụng trong action. Kết nối TCPROS cũng tương tự chỉ khác là khi client gửi lệnh hủy bỏ hoặc server gửi kết quả
 thì sẽ ngắt kết nối.</p>
 <p>Ví dụ về truyền thông tinw</p>
 <a class="reference internal image-reference" href="../_images/anh2c14.png"><img alt="../_images/anh2c14.png" src="../_images/anh2c14.png" style="width: 300px;" /></a>
+<p><strong>Message</strong></p>
+<blockquote>
+<div><p>Message là một gói dữ liệu sử dụng để trao đổi dữ liệu giữa các node. Các topic,
+service và các action được sử dụng message để giao tiếp. Một thông điệp có thể bao
+gồm các kiểu dữ liệu cơ bản như số nguyên, con trỏ động, Boolean cũng có thể là các
+mảng 1 chiều, 2 chiều... Hơn nữa, một message có thể chứa những thông điệp khác như
+'geometry_msgs / PoseStamped'. Ngoài ra, các tiêu đề 'std_msgs / Tiêu đề' mà thường được
+sử dụng trong ROS có thể được bao gồm trong tin nhắn. Các thông điệp này có thể được mô tả
+như kiểu trường và tên trường như hình dưới đây:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fieldtype1</span> <span class="n">fieldname1</span>
+<span class="n">fieldtype2</span> <span class="n">fieldname2</span>
+<span class="n">fieldtype3</span> <span class="n">fieldname3</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>còn thiếu phần giới thiệu các kiểu dữ liệu</p>
+<p>(std_msgs / Header) có một chức vụ gì đó để kiểm tra tin nhắn, đo thời gian truyền...</p>
+<p>Có ví dụ là cho rùa di chuyển sẽ được giải thích sau.</p>
+<ol class="arabic simple">
+<li><p>file.msg</p></li>
+</ol>
+<blockquote>
+<div><p>Là tập tin nhắn đuôi msg sử dụng để trao đổi trong các topic,service, action.
+ví dụ tin nhắn 'geometry_msgs' điều khiển chuyển động của con rùa phía trên là một ví dụ. trong nó sẽ khai báo các loại trường và tên trường.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>file.srv</p></li>
+<li><p>Action file</p></li>
+</ol>
+<div class="section" id="name">
+<h2>Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="coordinate-transformation-tf">
+<h2>Coordinate Transformation (TF)<a class="headerlink" href="#coordinate-transformation-tf" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="client-library">
+<h2>Client Library<a class="headerlink" href="#client-library" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="communication-between-heterogenous-devices">
+<h2>Communication between Heterogenous Devices<a class="headerlink" href="#communication-between-heterogenous-devices" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="file-system">
+<h2>File System<a class="headerlink" href="#file-system" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>File Configuration</p></li>
+<li><p>Installation Folder</p></li>
+<li><p>Workspace Folder</p></li>
+</ol>
+</div>
+<div class="section" id="build-system">
+<h2>Build System<a class="headerlink" href="#build-system" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Creating a Package</p></li>
+<li><p>Modifying the Package Configuration File (package.xml)</p></li>
+<li><p>Modifying the Build Configuration File (CMakeLists.txt)</p></li>
+<li><p>Writing Source Code</p></li>
+<li><p>Building the Package</p></li>
+<li><p>Running the Node</p></li>
+</ol>
 </div>
 </div>
 

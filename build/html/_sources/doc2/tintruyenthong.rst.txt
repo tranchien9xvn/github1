@@ -19,30 +19,30 @@ Truyền thông tin
 +----------+-------------+------------+--------------------------------------+
 
 
-Topic
------
+* Topic
+
 
 .. image:: images2/anh2c2.png
    :width: 400px
    
-* Node publisher và node subscriber đăng kí message với master. Khi giống nhau chúng kết nối trực tiếp với nhau.
-* Chủ đề là một chiều, duy trì kết nối gửi và nhận liên tục. 
-* Nó phù hợp cho dữ liệu cảm biến.
-* Nhiều thuê bao có thể nhận được thông báo từ một nhà xuất bản và ngược lại.
+1. Node publisher và node subscriber đăng kí message với master. Khi giống nhau chúng kết nối trực tiếp với nhau.
+2. Chủ đề là một chiều, duy trì kết nối gửi và nhận liên tục. 
+3. Nó phù hợp cho dữ liệu cảm biến.
+4. Nhiều thuê bao có thể nhận được thông báo từ một nhà xuất bản và ngược lại.
 
-Service
--------
+* Service
+
 
 .. image:: images2/anh2c3.png
    :width: 400px
    
-* Truyền thông về dịch vụ là một thông tin liên lạc đồng bộ hai chiều giữa service client yêu cầu một dịch vụ 
-  và service server đáp ứng yêu cầu như trong hình trên.
-* Khi yêu cầu và phản ứng của các dịch vụ được hoàn thành, kết nối giữa hai nút sẽ bị ngắt kết nối. 
-* Một dịch vụ thường được sử dụng để chỉ huy một robot thực hiện một hành động hoặc nút cụ thể nhằm thực hiện các sự kiện nhất định với một điều kiện cụ thể.
+1. Truyền thông về dịch vụ là một thông tin liên lạc đồng bộ hai chiều giữa service client yêu cầu một dịch vụ 
+   và service server đáp ứng yêu cầu như trong hình trên.
+2. Khi yêu cầu và phản ứng của các dịch vụ được hoàn thành, kết nối giữa hai nút sẽ bị ngắt kết nối. 
+3. Một dịch vụ thường được sử dụng để chỉ huy một robot thực hiện một hành động hoặc nút cụ thể nhằm thực hiện các sự kiện nhất định với một điều kiện cụ thể.
 
-Action
-------
+* Action
+
 
 .. image:: images2/anh2c4.png
    :width: 400px
@@ -56,11 +56,10 @@ Cuối cùng máy chủ báo nhiệm vụ thành công, máy khách tiếp nhậ
 Ban đầu các node kết nối với master. master lưu giữ tất cả thông tin của các node. node này sẽ có được lượng thông tin tương đối của node khác thông qua master.
 Sau đó mỗi node kết nối trực tiếp với nhau để thực hiện truyền thông điệp.
 
-Parameter
----------
+* Parameter
 
-Message Communication Flow
---------------------------
+
+* Message Communication Flow
 
 1. chạy Master
 
@@ -131,8 +130,8 @@ Message Communication Flow
 .. image:: images2/anh2c13.png
    :width: 300px
 
-Service Request and Response
-----------------------------
+**Service Request and Response**
+
 
 Thủ tục thảo luận ở trên tương ứng với các thông tin liên lạc là Topic. Thông tin liên lạc  topic publish và subscribe các message liên tục, 
 trừ trường hợp publisher hoặc subscriber bị chấm dứt.
@@ -149,8 +148,8 @@ Nếu yêu cầu bổ sung là cần thiết, các thủ tục liên quan phải
    :width: 300px
    
 
-Action
-------
+**Action được thực hiện**
+
 
 .. image:: images2/anh2c14.png
    :width: 300px
@@ -164,8 +163,81 @@ Ví dụ về truyền thông tinw
 .. image:: images2/anh2c14.png
    :width: 300px
  
+**Message**
 
-   
+
+ Message là một gói dữ liệu sử dụng để trao đổi dữ liệu giữa các node. Các topic, 
+ service và các action được sử dụng message để giao tiếp. Một thông điệp có thể bao 
+ gồm các kiểu dữ liệu cơ bản như số nguyên, con trỏ động, Boolean cũng có thể là các 
+ mảng 1 chiều, 2 chiều... Hơn nữa, một message có thể chứa những thông điệp khác như 
+ 'geometry_msgs / PoseStamped'. Ngoài ra, các tiêu đề 'std_msgs / Tiêu đề' mà thường được 
+ sử dụng trong ROS có thể được bao gồm trong tin nhắn. Các thông điệp này có thể được mô tả 
+ như kiểu trường và tên trường như hình dưới đây::
+  
+  fieldtype1 fieldname1
+  fieldtype2 fieldname2
+  fieldtype3 fieldname3
+  
+còn thiếu phần giới thiệu các kiểu dữ liệu
+
+(std_msgs / Header) có một chức vụ gì đó để kiểm tra tin nhắn, đo thời gian truyền...
+
+Có ví dụ là cho rùa di chuyển sẽ được giải thích sau.
+
+1. file.msg
+ 
+ Là tập tin nhắn đuôi msg sử dụng để trao đổi trong các topic,service, action.
+ ví dụ tin nhắn 'geometry_msgs' điều khiển chuyển động của con rùa phía trên là một ví dụ. trong nó sẽ khai báo các loại trường và tên trường.
+ 
+2. file.srv
+
+3. Action file
+
+Name
+----
+ 
+ 
+Coordinate Transformation (TF)
+------------------------------
+ 
+ 
+Client Library
+--------------
+ 
+ 
+Communication between Heterogenous Devices
+------------------------------------------
+
+ 
+File System
+-----------
+
+1. File Configuration  
+
+2. Installation Folder
+
+3. Workspace Folder
+
+
+Build System
+------------
+
+1. Creating a Package
+
+2. Modifying the Package Configuration File (package.xml)
+
+3. Modifying the Build Configuration File (CMakeLists.txt)
+
+4. Writing Source Code
+
+5. Building the Package
+
+6. Running the Node
+
+
+
+
+  
    
    
    
