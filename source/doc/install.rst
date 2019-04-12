@@ -23,10 +23,11 @@ Cách 1: Cài đặt chung
 
     sudo apt-get install -y chrony ntpdate 
     sudo ntpdate -q ntp.ubuntu.com 
-  
+    sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+	sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu xenial main" > /etc/apt/sources.list.d/ros-latest.list'
 4. Cài khóa công khai để tải các package trên kho lưu trữ của ROS::
 
-    sudo apt-key adv --keyserver hkp: //ha.pool.sks-keyservers.net: 80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+	sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 	
 5. Nâng cấp các package trong Ubuntu của bạn. Ở thời điểm hiện tại bạn hiểu package đơn giản là một folder trong windown::
 
@@ -215,6 +216,7 @@ Giờ các bạn hãy làm theo hướng dẫn xem điều thú vị gì sẽ x�
  git clone -b kinetic-devel https://github.com/ros-planning/moveit_tutorials.git
  git clone -b kinetic-devel https://github.com/ros-planning/panda_moveit_config.git
  cd ~/ws_moveit/src
+ rosdep install -y --from-paths . --ignore-src --rosdistro kinetic
  cd ~/ws_moveit
  catkin config --extend /opt/ros/kinetic
  catkin build
@@ -239,3 +241,16 @@ Bạn sẽ thấy hình robot pan_da hiện ra. Qủa thật quá thú vị ph�
    :width: 600px
    
 Những lệnh trên tôi sẽ giải thích chi tiết cho các bạn ở những phần sau. Giờ các bạn hãy thỏa sức mày mò để xem các chức năng trên RViz đi nào.
+
+**Tải con rùa về nghịch**::
+ 
+ sudo apt-get install ros-kinetic-turtlebot3
+ cd ~/catkin_ws/src
+ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+ cd ~/catkin_ws/
+ catkin_make
+ roscore
+ rosrun turtlesim turtlesim_node
+ rosrun turtlesim turtle_teleop_key
+ rqt_graph

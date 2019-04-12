@@ -82,7 +82,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Robot v? ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Robot and ROS</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Hướng dẫn cài đặt</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#cach-1-cai-dat-chung">Cách 1: Cài đặt chung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cach-2-cai-dat-nhanh">Cách 2: cài đặt nhanh</a></li>
@@ -94,12 +94,27 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc2/cacthuatngu.html">Các khái niệm quan trọng của ROS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc2/tintruyenthong.html">TRUYỀN THÔNG TIN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc2/tintruyenthong.html">Truyền thông tin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc2/createpackage.html">Tạo package</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc2add/ros_commands.html">Ros_commands</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc3/URDF-GAZEBO.html">Urdf_gazebo</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc4/approach.html">Kiến trúc của ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc4/architecture.html">Kiến trúc của MoveIt</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc5/Move_group.html">Move_group</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc6/API.html">API++</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc7/Descarte.html">Descarte</a></li>
 </ul>
 
             
@@ -192,11 +207,13 @@
 <li><p>Cài đặt 'chrony' và sau đó chỉ định máy chủ NTP bằng lệnh 'ntpdate':</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">chrony</span> <span class="n">ntpdate</span>
 <span class="n">sudo</span> <span class="n">ntpdate</span> <span class="o">-</span><span class="n">q</span> <span class="n">ntp</span><span class="o">.</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">com</span>
+<span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+    <span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu xenial main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
 </pre></div>
 </div>
 </li>
 <li><p>Cài khóa công khai để tải các package trên kho lưu trữ của ROS:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">hkp</span><span class="p">:</span> <span class="o">//</span><span class="n">ha</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">sks</span><span class="o">-</span><span class="n">keyservers</span><span class="o">.</span><span class="n">net</span><span class="p">:</span> <span class="mi">80</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="mi">421</span><span class="n">C365BD9FF1F717815A3895523BAEEB01FA116</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">hkp</span><span class="p">:</span><span class="o">//</span><span class="n">ha</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">sks</span><span class="o">-</span><span class="n">keyservers</span><span class="o">.</span><span class="n">net</span><span class="p">:</span><span class="mi">80</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="mi">421</span><span class="n">C365BD9FF1F717815A3895523BAEEB01FA116</span>
 </pre></div>
 </div>
 </li>
@@ -376,6 +393,7 @@ export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
 <span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">kinetic</span><span class="o">-</span><span class="n">devel</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">moveit_tutorials</span><span class="o">.</span><span class="n">git</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">kinetic</span><span class="o">-</span><span class="n">devel</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">panda_moveit_config</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit</span><span class="o">/</span><span class="n">src</span>
+<span class="n">rosdep</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="o">--</span><span class="n">from</span><span class="o">-</span><span class="n">paths</span> <span class="o">.</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">src</span> <span class="o">--</span><span class="n">rosdistro</span> <span class="n">kinetic</span>
 <span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit</span>
 <span class="n">catkin</span> <span class="n">config</span> <span class="o">--</span><span class="n">extend</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span>
 <span class="n">catkin</span> <span class="n">build</span>
@@ -394,6 +412,19 @@ export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
 <p>Bạn sẽ thấy hình robot pan_da hiện ra. Qủa thật quá thú vị phải không các bạn.</p>
 <a class="reference internal image-reference" href="../_images/anh8.png"><img alt="../_images/anh8.png" src="../_images/anh8.png" style="width: 600px;" /></a>
 <p>Những lệnh trên tôi sẽ giải thích chi tiết cho các bạn ở những phần sau. Giờ các bạn hãy thỏa sức mày mò để xem các chức năng trên RViz đi nào.</p>
+<p><strong>Tải con rùa về nghịch</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">turtlebot3</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">src</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ROBOTIS</span><span class="o">-</span><span class="n">GIT</span><span class="o">/</span><span class="n">turtlebot3</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ROBOTIS</span><span class="o">-</span><span class="n">GIT</span><span class="o">/</span><span class="n">turtlebot3_msgs</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span>
+<span class="n">catkin_make</span>
+<span class="n">roscore</span>
+<span class="n">rosrun</span> <span class="n">turtlesim</span> <span class="n">turtlesim_node</span>
+<span class="n">rosrun</span> <span class="n">turtlesim</span> <span class="n">turtle_teleop_key</span>
+<span class="n">rqt_graph</span>
+</pre></div>
+</div>
 </div>
 </div>
 
