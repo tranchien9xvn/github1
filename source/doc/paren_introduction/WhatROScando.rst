@@ -32,7 +32,7 @@ NỀN TẢNG PHẦN MỀM CỦA ROBOT
  Pepper SoftBank Jibo MIT Media Lab đang sắp được ra mắt.
  
  Trừu tượng phần cứng là việc bạn có thể lập trình điều khiển robot mà không cần hiểu nhiều về phần cứng.
- Nó cũng giống như việc lập trình ứng dụng cho điện thoại thông minh. Trái nghiệp với việc phát triển trước đây là người phát triển phải thiết kế cả phần mềm lẫn phần cứng.
+ Nó cũng giống như việc lập trình ứng dụng cho điện thoại thông minh. Trái ngược với việc phát triển trước đây là người phát triển phải thiết kế cả phần mềm lẫn phần cứng.
  Bây giờ nhiều kĩ sư phần mềm ngành công nghệ thông tin cũng bắt tay vào viết các ứng dụng cho phần mềm robot đóng góp vào sự phát triển của robot.
  
  Trong những nền tảng phần mềm, nền tảng chính là hệ điều hành robot. Nhật Bản có hệ điều hành(OpenRTM), Châu Âu có (OROCOS), Hàn Quốc có OPROS...
@@ -41,7 +41,7 @@ NỀN TẢNG PHẦN MỀM CỦA ROBOT
  Phổ biến nhất nền tảng phần mềm robot là ROS, một hệ điều hành Robot sẽ được đề cập đến trong tài liệu này.
  
  Một vài hành động như gắp vật, cảm biến vật cản và lập kế hoạch di chuyển có vẻ như dễ với con người nhưng lại cực kì khó khăn đối với robot và đội ngũ phát triển.
- Để giải quyết vấn đề này cần có sự hợp tác của cộng đồng robot trên toàn thế giới. Khi đó mỗi người sẽ làm một nhiệm vụ chuyên môn. Tôi ví vụ một công ty muốn chế tạo một robot dọn rác thay những cô lao công. họ muốn tập trung công sức vào việc sử lý ảnh còn việc chuyển động, lập trình đường đi sẽ mượn ứng dụng của công ty khác thông qua ROS.
+ Để giải quyết vấn đề này cần có sự hợp tác của cộng đồng robot trên toàn thế giới. Khi đó mỗi người sẽ làm một nhiệm vụ chuyên môn. Tôi ví vụ một công ty muốn chế tạo một robot dọn rác thay những cô lao công. họ muốn tập trung công sức vào việc xử lý ảnh còn việc chuyển động, lập trình đường đi sẽ mượn ứng dụng của công ty khác thông qua ROS.
  Từ đó sẽ nhanh chóng tạo ra robot với sự hoàn thiện cao.
  
 BẠN NÊN SỬ DỤNG NỀN TẢNG PHẦN MỀM ROS
